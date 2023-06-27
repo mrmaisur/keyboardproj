@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name "marbastlib-choc")(type "KiCad")(uri "${KIPRJMOD}/Library/marbastlib-6-tested/marbastlib-choc.pretty/marbastlib-choc.kicad_sym")(options "")(descr ""))
+  (lib (name "marbastlib-mx")(type "KiCad")(uri "${KIPRJMOD}/Library/marbastlib-6-tested/marbastlib-mx.pretty/marbastlib-mx.kicad_sym")(options "")(descr ""))
+  (lib (name "marbastlib-various")(type "KiCad")(uri "${KIPRJMOD}/Library/marbastlib-6-tested/marbastlib-various.pretty/marbastlib-various.kicad_sym")(options "")(descr ""))
+)

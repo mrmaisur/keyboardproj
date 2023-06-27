@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name "marbastmx")(type "KiCad")(uri "${KIPRJMOD}/Library/marbastlib-6-tested/marbastlib-mx.pretty")(options "")(descr ""))
+  (lib (name "marbastchoc")(type "KiCad")(uri "${KIPRJMOD}/Library/marbastlib-6-tested/marbastlib-choc.pretty")(options "")(descr ""))
+  (lib (name "marbastvary")(type "KiCad")(uri "${KIPRJMOD}/Library/marbastlib-6-tested/marbastlib-various.pretty")(options "")(descr ""))
+  (lib (name "USB-C")(type "KiCad")(uri "${KIPRJMOD}/Library/USB-C-Connectors-master/Kicad/USB-C-Power-tester/USB-C-Power-tester.pretty")(options "")(descr ""))
+)
