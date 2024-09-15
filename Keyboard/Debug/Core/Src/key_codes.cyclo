@@ -1,0 +1,2 @@
+../Core/Src/key_codes.c:3:6:update_modifier_byte	9
+../Core/Src/key_codes.c:32:5:is_modifier	9
