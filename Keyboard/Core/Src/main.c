@@ -53,7 +53,7 @@ TIM_HandleTypeDef htim2;
 extern USBD_HandleTypeDef hUsbDeviceFS;
 
 int keys[KEYS_PER_REPORT] = {KEY_NONE};
-int modifier_byte = 0;
+uint8_t modifier_byte = 0;
 
 void delay_us(uint16_t us) {
 	__HAL_TIM_SET_COUNTER(&htim2, 0);  // reset counter back to 0

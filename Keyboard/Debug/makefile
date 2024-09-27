@@ -64,8 +64,8 @@ all: main-build
 main-build: Keyboard.elf secondary-outputs
 
 # Tool invocations
-Keyboard.elf Keyboard.map: $(OBJS) $(USER_OBJS) C:\Users\Maisur\Personal\ Projects\Keyboard\Keyboard\STM32F072CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Keyboard.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\Maisur\Personal Projects\Keyboard\Keyboard\STM32F072CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Keyboard.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Keyboard.elf Keyboard.map: $(OBJS) $(USER_OBJS) C:\Users\Maisur\Personal\ Projects\Keyboard\keyboardproj\Keyboard\STM32F072CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Keyboard.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\Maisur\Personal Projects\Keyboard\keyboardproj\Keyboard\STM32F072CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Keyboard.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
