@@ -1,1 +1,2 @@
 ../Core/Src/key_scan.c:54:6:scan_keys	32	static
+../Core/Src/key_scan.c:80:6:replace_fn	40	static

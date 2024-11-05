@@ -16,4 +16,5 @@ typedef struct {
 } Keyboard;
 
 void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte);
+void replace_fn(int keys[KEYS_PER_REPORT]);
 #endif

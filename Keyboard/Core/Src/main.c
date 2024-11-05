@@ -132,6 +132,7 @@ int main(void)
 	}
 
 	scan_keys(keys, &modifier_byte);
+	replace_fn(keys);
 	report = (Keyboard) {modifier_byte, 0, keys[0], keys[1], keys[2], keys[3], keys[4], keys[5]};
 
 	USBD_HID_SendReport(&hUsbDeviceFS, &report, sizeof(report));
@@ -392,7 +393,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_10
                           |GPIO_PIN_11;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB12 PB13 PB14 PB15

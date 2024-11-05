@@ -3,6 +3,8 @@
 
 void update_modifier_byte(int keycode, int *modifier_byte);
 int is_modifier(int keycode);
+int is_number(int keycode);
+int return_fn(int keycode);
 
 /**
  * Modifier masks - used for the first byte in the HID report.
@@ -139,7 +141,7 @@ int is_modifier(int keycode);
 #define KEY_F13 0x68 // Keyboard F13
 #define KEY_F14 0x69 // Keyboard F14
 #define KEY_F15 0x6a // Keyboard F15
-#define KEY_F16 0x6b // Keyboard F16
+#define KEY_MOD_FN 0x6b // Keyboard F16
 
 /**
  * Repurposed keycodes

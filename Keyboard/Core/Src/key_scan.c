@@ -56,7 +56,6 @@ void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte) {
 
     for (int col=0; col < NUM_COLUMNS; col++) {
         HAL_GPIO_WritePin(columns_ports[col], columns_pins[col], GPIO_PIN_SET);
-        delay_us(10);
 
         for (int row=0; row < NUM_ROWS; row++) {
             int keycode = BASE_LAYOUT[row][col];
@@ -68,17 +67,27 @@ void scan_keys(int keys[KEYS_PER_REPORT], int *modifier_byte) {
 
                 if (is_modifier(keycode)) {
                     update_modifier_byte(keycode, modifier_byte);
-                } else if (num_keys < KEYS_PER_REPORT && active_toggle[keycode] == 0) { // add a check to see if debounced as well
-                    set_debounce(keycode);
+                } else if (num_keys < KEYS_PER_REPORT) { // add a check to see if debounced as well
                     keys[num_keys] = keycode;
                     num_keys++;
                 }
-            } else if (active_toggle[keycode] == 1 && debounce_array[keycode] == 0) {
-                active_toggle[keycode] = 0;
             }
         }
         HAL_GPIO_WritePin(columns_ports[col], columns_pins[col], GPIO_PIN_RESET);
-        delay_us(10);
     }
-    debounce_decrement();
 }
+
+void replace_fn(int keys[KEYS_PER_REPORT]){
+	for (int i = 0; i < KEYS_PER_REPORT; i++){
+		if (keys[i] == KEY_MOD_FN){
+			for (int j = 0; j < KEYS_PER_REPORT; j++){
+				if (is_number(keys[j])){
+					int keycode = keys[j];
+					keys[j] = return_fn(keycode);
+				}
+			}
+		}
+	}
+}
+
+

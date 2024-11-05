@@ -1,1 +1,2 @@
-../Core/Src/key_scan.c:54:6:scan_keys	11
+../Core/Src/key_scan.c:54:6:scan_keys	8
+../Core/Src/key_scan.c:80:6:replace_fn	5
